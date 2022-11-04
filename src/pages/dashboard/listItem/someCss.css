@@ -1,0 +1,61 @@
+
+
+.norm-button{
+    text-decoration: none;
+    color:black;
+}
+
+.font_1{
+    font-size: 14px !important;
+}
+
+.socondary-color{
+    color:rgba(151, 151, 151, 0.767)
+}
+
+.font_4{
+    font-size: 18px !important;
+}
+
+.font_6{
+    font-size: 24px !important;
+}
+
+.font_9{
+    font-size: 30px !important;
+}
+
+.TextFieldWidth{
+}
+
+
+.div_avatar_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar_profile{
+    width: 300px;
+    height: 100% !important;
+    margin: 0;
+}
+
+.info_profile{
+}
+
+.back-button{
+    background-color: rgba(87, 87, 87, 0.788) !important;
+}
+
+.confirm-button{
+    background-color: rgba(54, 173, 30, 0.822) !important;
+}
+
+.bold{
+    font-weight: 400 !important;
+}
+
+.change-button{
+    background-color: rgba(255, 144, 71, 0.952) !important;
+}
