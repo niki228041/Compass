@@ -1,7 +1,7 @@
 import axios from "axios";
 import IUser from "../types/TypeUser"
 
-axios.defaults.baseURL = "https://40.76.116.183:8080/api/User";
+axios.defaults.baseURL = "http://40.76.116.183:8080/api/User";
 axios.defaults.withCredentials = true;
 
 const responseBody: any = (response: any) => response.data;
