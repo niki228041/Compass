@@ -14,7 +14,7 @@ pipeline  {
         stage("Removing all containers") {
             steps {
                 echo 'Removing containers ...'
-                 dir('.'){
+                 dir('/home/lopocz'){
                     sh "docker stop compass_frontend"
                     sh "docker rm compass_frontend"
                 }
