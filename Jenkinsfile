@@ -28,7 +28,7 @@ pipeline  {
             steps {
                 echo 'Removing containers ...'
                     sh "docker ps -q --filter `name=compass_frontend` | grep -q . && docker stop compass_frontend || echo Not stop"
-                    sh "docker rm compass_frontend"
+                    sh "docker ps -q --filter `name=compass_frontend` | grep -q . && docker rm compass_frontend || echo Not removed"
                 echo 'I did it!'
                 
             }
