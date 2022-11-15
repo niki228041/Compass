@@ -13,6 +13,17 @@ pipeline  {
         timestamps()
     }
     stages {
+        stage("docker login") {
+            steps {
+                echo " ============== docker login =================="
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    sh '''
+                    docker login -u $USERNAME -p $PASSWORD
+                    '''
+                }
+            }
+        }
+        
         stage("Removing all containers") {
             steps {
                 echo 'Removing containers ...'
@@ -38,16 +49,7 @@ pipeline  {
                 }
             }
         }
-        stage("docker login") {
-            steps {
-                echo " ============== docker login =================="
-                withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh '''
-                    docker login -u $USERNAME -p $PASSWORD
-                    '''
-                }
-            }
-        }
+        
         stage("docker push image") {
             steps {
                 echo " ============== pushing image =================="
