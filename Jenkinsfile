@@ -16,10 +16,8 @@ pipeline  {
         stage("Removing all containers") {
             steps {
                 echo 'Removing containers ...'
-                 dir('/home/main'){
                     sh "docker stop compass_frontend"
                     sh "docker rm compass_frontend"
-                }
             }
         }
         stage("Removing old images") {
