@@ -27,8 +27,8 @@ pipeline  {
         stage("Removing all containers") {
             steps {
                 echo 'Removing containers ...'
-                    sh "sudo docker stop compass_frontend"
-                    sh "sudo docker rm compass_frontend"
+                    sh "docker stop compass_frontend"
+                    sh "docker rm compass_frontend"
                 echo 'I did it!'
                 
             }
